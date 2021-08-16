@@ -4,8 +4,8 @@ var threeSumClosest = function(nums, target) {
 
     while (condition !== true) {
         for (i = 0; i < nums.length  - 2; i++) {
-            for (j = 1; j < nums.length - 1; j++) {
-                for (k = 2; k < nums.length; k++) {
+            for (j = i + 1; j < nums.length - 1; j++) {
+                for (k = j + 1; k < nums.length; k++) {
                     let sum = nums[i] + nums[j] + nums[k]
                     if (sum - difference === target || sum + difference === target) {
                         if (i !== j && i !== k && j !== k) {
